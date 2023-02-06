@@ -16,7 +16,7 @@ const openai = new OpenAIApi(configuration);
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/', async (req, res) => {
+app.post('/.netlify/functions/yourFunction', async (req, res) => {
     const { message } = req.body;
     const response = await openai.createCompletion({
         model: "text-davinci-003",
@@ -35,11 +35,5 @@ OBuDdy:`,
     console.log(response.data);
     if(response.data.choices[0].text){
         res.json({
-            message: response.data.choices[0].text
-        });
-    }    
-});
+            message: response
 
-app.listen(port, () => {
-    console.log(`Express server listening on port ${port}`);
-});
