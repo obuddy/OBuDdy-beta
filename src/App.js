@@ -8,11 +8,14 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:3001/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    fetch(`/.netlify/functions/yourFunction`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ message })
+})
+
       body: JSON.stringify({ message })
     })
       .then((res) => res.json())
