@@ -7,7 +7,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`/.netlify/functions/yourFunction`, {
+    fetch(`/obuddy.netlify.app`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
