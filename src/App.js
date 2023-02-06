@@ -1,3 +1,4 @@
+//  create a react component that inputs a textarea message then performs a fetch request to localhost:3001 gets back a response as a data.message and displays that message in a box below
 import React, { useState } from 'react';
 import './App.css';
 
@@ -7,7 +8,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`/obuddy.netlify.app`, {
+    fetch(`http://localhost:${process.env.PORT || 3001}/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -20,8 +21,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>OBuDdy beta</h1>
-      <h1>By Motabachi</h1>
+    <h1>OBuDdy beta</h1>
+    <h1>By Motabachi</h1>
       <form onSubmit={handleSubmit}>
         <textarea
           value={message}
@@ -34,5 +35,3 @@ function App() {
     </div>
   );
 }
-
-export default App
