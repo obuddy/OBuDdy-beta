@@ -9,8 +9,9 @@ const port = 3001;
 
 const configuration = new Configuration({
     organization: "org-dZvNRCYFmarPX8qVRRXiErTD",
-    apiKey: "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",
+    apiKey: "YOUR_API_KEY",
 });
+
 const openai = new OpenAIApi(configuration);
 
 app.use(bodyParser.json());
