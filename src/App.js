@@ -8,7 +8,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://obuddy.netlify.app/`, {
+    fetch(`https://obuddy.netlify.app${process.env.PORT || 3001}/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
