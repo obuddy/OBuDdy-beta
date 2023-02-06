@@ -7,7 +7,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const port = https://obuddy.netlify.app/;
+const port = obuddy.netlify.app;
 
 const configuration = new Configuration({
     organization: "org-dZvNRCYFmarPX8qVRRXiErTD",
